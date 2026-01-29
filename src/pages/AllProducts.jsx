@@ -6,6 +6,8 @@ import { backendUrl } from '../assets/assets';
 
 import AddToCartButton from '../components/AddToCartButton';
 
+import mainBannerBg from '../assets/main_banner_bg.png';
+
 const AllProducts = () => {
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -40,7 +42,7 @@ const AllProducts = () => {
     return (
         <div className="min-h-screen flex flex-col bg-slate-50/50 relative overflow-hidden">
             {/* Background Pattern Layer */}
-            <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: "url('/src/assets/main_banner_bg.png')", backgroundSize: '400px' }}></div>
+            <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: `url(${mainBannerBg})`, backgroundSize: '400px' }}></div>
 
             <Header />
 

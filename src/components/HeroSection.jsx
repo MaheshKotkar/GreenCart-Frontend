@@ -1,4 +1,5 @@
-import React from 'react';
+import mainBannerBg from '../assets/main_banner_bg.png';
+import mainBannerBgSm from '../assets/main_banner_bg_sm.png';
 
 const HeroSection = () => {
     return (
@@ -9,13 +10,13 @@ const HeroSection = () => {
                     {/* Desktop Background */}
                     <div
                         className="hidden md:block absolute inset-0 bg-cover bg-right lg:bg-center no-repeat"
-                        style={{ backgroundImage: "url('/src/assets/main_banner_bg.png')" }}
+                        style={{ backgroundImage: `url(${mainBannerBg})` }}
                     ></div>
 
                     {/* Mobile Background */}
                     <div
                         className="md:hidden absolute inset-0 bg-cover bg-center no-repeat"
-                        style={{ backgroundImage: "url('/src/assets/main_banner_bg_sm.png')" }}
+                        style={{ backgroundImage: `url(${mainBannerBgSm})` }}
                     ></div>
 
                     {/* Content Overlay */}

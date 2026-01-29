@@ -2,9 +2,12 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
 import { useAuth } from '../context/AuthContext';
+import logo from '../assets/logo.svg';
+import profileIcon from '../assets/profile_icon.png';
 
 
 const Header = () => {
+    // ... (rest of component until logo usage)
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const { cartCount } = useCart();
     const { token, logout } = useAuth();
@@ -32,7 +35,7 @@ const Header = () => {
 
                     {/* Logo */}
                     <Link to="/" className="flex items-center flex-shrink-0">
-                        <img src="/src/assets/logo.svg" alt="GreenCart" className="h-6 xs:h-7 sm:h-8" />
+                        <img src={logo} alt="GreenCart" className="h-6 xs:h-7 sm:h-8" />
                     </Link>
 
                     {/* Navigation Links - Desktop Only (lg+) */}
@@ -103,7 +106,7 @@ const Header = () => {
                             <div className="relative group">
                                 <button className="p-0.5 border-2 border-transparent group-hover:border-primary rounded-full transition-all duration-300">
                                     <img
-                                        src="/src/assets/profile_icon.png"
+                                        src={profileIcon}
                                         alt="Profile"
                                         className="w-7 h-7 xs:w-8 xs:h-8 sm:w-9 sm:h-9 rounded-full shadow-sm"
                                     />

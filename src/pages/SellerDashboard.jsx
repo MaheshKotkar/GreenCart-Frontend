@@ -7,6 +7,8 @@ import OrdersList from '../components/OrdersList';
 import AddCategory from '../components/AddCategory';
 import ListCategory from '../components/ListCategory';
 
+import logo from '../assets/logo.svg';
+
 const SellerDashboard = () => {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
@@ -34,7 +36,7 @@ const SellerDashboard = () => {
                     </button>
 
                     <Link to="/" className="flex items-center">
-                        <img src="/src/assets/logo.svg" alt="GreenCart" className="h-7 md:h-8" />
+                        <img src={logo} alt="GreenCart" className="h-7 md:h-8" />
                     </Link>
                 </div>
                 <div className="flex items-center space-x-3 md:space-x-6">

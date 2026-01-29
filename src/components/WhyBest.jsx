@@ -3,6 +3,7 @@ import deliveryTruckIcon from '../assets/delivery_truck_icon.svg';
 import leafIcon from '../assets/leaf_icon.svg';
 import coinIcon from '../assets/coin_icon.svg';
 import trustIcon from '../assets/trust_icon.svg';
+import mainBannerBg from '../assets/main_banner_bg.png';
 
 const WhyBest = () => {
     const features = [
@@ -35,7 +36,8 @@ const WhyBest = () => {
                 <div className="bg-light-mint rounded-[40px] overflow-hidden relative flex flex-col lg:flex-row shadow-sm border border-green-50/50">
 
                     {/* Background Pattern Layer */}
-                    <div className="absolute inset-0 opacity-[0.04] pointer-events-none" style={{ backgroundImage: "url('/src/assets/main_banner_bg.png')", backgroundSize: '200px' }}></div>
+                    <div className="absolute inset-0 opacity-[0.04] pointer-events-none" style={{ backgroundImage: `url(${mainBannerBg})`, backgroundSize: '200px' }}></div>
+
 
                     {/* Text Section - Top on Mobile, Right on Desktop */}
                     <div className="w-full lg:w-1/2 lg:order-2 relative z-10 flex flex-col justify-center p-8 sm:p-14 lg:p-20 text-center lg:text-left">

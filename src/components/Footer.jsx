@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { backendUrl } from '../assets/assets';
 
+import logo from '../assets/logo.svg';
+
 const Footer = () => {
     const [categories, setCategories] = useState([]);
 
@@ -41,10 +43,9 @@ const Footer = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-12 lg:gap-8 mb-16">
                     {/* Brand Section */}
-                    {/* ... (Previous code remains) */}
                     <div className="xl:col-span-2 pr-0 lg:pr-12">
                         <Link to="/" className="inline-block mb-6">
-                            <img src="/src/assets/logo.svg" alt="GreenCart" className="h-9" />
+                            <img src={logo} alt="GreenCart" className="h-9" />
                         </Link>
                         <p className="text-gray-500 text-[15px] leading-loose mb-8 max-w-sm">
                             Experience the future of grocery shopping. We deliver freshness, quality, and savings directly to your doorstep with our state-of-the-art delivery network.
@@ -133,4 +134,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
