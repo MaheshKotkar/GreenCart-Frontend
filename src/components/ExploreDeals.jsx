@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import AddToCartButton from './AddToCartButton';
-import { backendUrl } from '../assets/assets';
+import { backendUrl, getImageUrl } from '../assets/assets';
 
 const ExploreDeals = () => {
     const [products, setProducts] = useState([]);
@@ -58,7 +58,7 @@ const ExploreDeals = () => {
                                 {/* Product Image Container */}
                                 <div className="relative aspect-square mb-8 rounded-3xl bg-gray-50 flex items-center justify-center p-6 group-hover:bg-primary/5 transition-colors duration-500">
                                     <img
-                                        src={product.image}
+                                        src={getImageUrl(product.image)}
                                         alt={product.name}
                                         className="max-w-[90%] max-h-[90%] object-contain transform group-hover:scale-110 transition-transform duration-700 ease-out"
                                     />

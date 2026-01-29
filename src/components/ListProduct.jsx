@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import toast from 'react-hot-toast';
-import { backendUrl } from '../assets/assets';
+import { backendUrl, getImageUrl } from '../assets/assets';
 import { allProducts as defaultProducts } from '../data/allProducts';
 
 const ListProduct = () => {
@@ -84,7 +84,7 @@ const ListProduct = () => {
             price: product.price,
             oldPrice: product.oldPrice || ''
         });
-        setEditImagePreview(product.image);
+        setEditImagePreview(getImageUrl(product.image));
         setEditImage(false);
         setShowEditModal(true);
     };
@@ -175,7 +175,7 @@ const ListProduct = () => {
                         {/* Image */}
                         <div className="flex justify-center md:block">
                             <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gray-50 rounded-xl flex items-center justify-center p-2 border border-gray-100 overflow-hidden">
-                                <img src={product.image} alt={product.name} className="max-w-full max-h-full object-contain transform hover:scale-110 transition-transform duration-500" />
+                                <img src={getImageUrl(product.image)} alt={product.name} className="max-w-full max-h-full object-contain transform hover:scale-110 transition-transform duration-500" />
                             </div>
                         </div>
 

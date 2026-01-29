@@ -7,7 +7,7 @@ import { allProducts } from '../data/allProducts';
 import { useAuth } from '../context/AuthContext';
 import axios from 'axios';
 import toast from 'react-hot-toast';
-import { backendUrl } from '../assets/assets';
+import { backendUrl, getImageUrl } from '../assets/assets';
 
 const Cart = () => {
     const { cartItems, cartCount, clearFromCart, setCartItems } = useCart();
@@ -189,7 +189,7 @@ const Cart = () => {
                                     <div key={product.name} className="flex flex-col md:flex-row md:items-center justify-between py-4 border-b border-gray-50 gap-6">
                                         <div className="flex items-center gap-6">
                                             <div className="w-24 h-24 bg-gray-50 rounded-2xl flex items-center justify-center p-2 border border-gray-100">
-                                                <img src={product.image} alt={product.name} className="max-w-full max-h-full object-contain" />
+                                                <img src={getImageUrl(product.image)} alt={product.name} className="max-w-full max-h-full object-contain" />
                                             </div>
                                             <div className="flex flex-col">
                                                 <h3 className="font-black text-dark-text text-[17px]">{product.name}</h3>

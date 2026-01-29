@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import axios from 'axios';
-import { backendUrl } from '../assets/assets';
+import { backendUrl, getImageUrl } from '../assets/assets';
 
 import AddToCartButton from '../components/AddToCartButton';
 
@@ -60,7 +60,7 @@ const AllProducts = () => {
                             {/* Product Image */}
                             <div className="relative aspect-square overflow-hidden mb-4 sm:mb-5 rounded-2xl flex items-center justify-center p-4 bg-gray-50/50 group-hover:bg-primary/5 transition-colors duration-500">
                                 <img
-                                    src={product.image}
+                                    src={getImageUrl(product.image)}
                                     alt={product.name}
                                     className="max-w-[90%] max-h-[90%] object-contain group-hover:scale-110 transition-transform duration-700 ease-out"
                                 />
