@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import AddToCartButton from './AddToCartButton';
+import { backendUrl } from '../assets/assets';
 
 const BestSellers = () => {
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
-    const backendUrl = 'http://192.168.1.101:5000/api';
 
     const fetchBestSellers = async () => {
         try {

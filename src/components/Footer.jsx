@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import { backendUrl } from '../assets/assets';
 
 const Footer = () => {
     const [categories, setCategories] = useState([]);
-    const backendUrl = 'http://192.168.1.101:5000/api';
 
     const defaultCategories = [
         { name: 'Organic veggies', slug: 'organic-veggies' },

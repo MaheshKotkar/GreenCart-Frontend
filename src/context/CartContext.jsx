@@ -1,13 +1,13 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { useAuth } from './AuthContext';
 import axios from 'axios';
+import { backendUrl } from '../assets/assets';
 
 const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
     const [cartItems, setCartItems] = useState({}); // { productId: quantity }
     const { token } = useAuth();
-    const backendUrl = 'http://192.168.1.101:5000/api';
 
     const [orders, setOrders] = useState([]);
 

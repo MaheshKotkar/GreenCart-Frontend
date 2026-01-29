@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import toast from 'react-hot-toast';
+import { backendUrl } from '../assets/assets';
 import { allProducts as defaultProducts } from '../data/allProducts';
 
 const ListProduct = () => {
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
     const [categories, setCategories] = useState([]);
-    const backendUrl = 'http://192.168.1.101:5000/api';
 
     // Edit Modal State
     const [showEditModal, setShowEditModal] = useState(false);

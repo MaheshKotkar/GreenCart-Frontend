@@ -1,6 +1,7 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import axios from 'axios';
 import toast from 'react-hot-toast';
+import { backendUrl } from '../assets/assets';
 
 const AuthContext = createContext();
 
@@ -11,7 +12,6 @@ export const AuthProvider = ({ children }) => {
     const [token, setToken] = useState(localStorage.getItem('token'));
     const [loading, setLoading] = useState(true);
 
-    const backendUrl = 'http://192.168.1.101:5000/api';
 
     const fetchUser = async (authToken) => {
         try {

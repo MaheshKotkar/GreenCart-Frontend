@@ -4,11 +4,11 @@ import Footer from '../components/Footer';
 import { useAuth } from '../context/AuthContext';
 import { allProducts } from '../data/allProducts';
 import axios from 'axios';
+import { backendUrl } from '../assets/assets';
 
 const MyOrders = () => {
     const [orders, setOrders] = useState([]);
     const { token } = useAuth();
-    const backendUrl = 'http://192.168.1.101:5000/api';
 
     const [products, setProducts] = useState([]);
 

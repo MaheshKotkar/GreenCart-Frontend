@@ -7,13 +7,13 @@ import { allProducts } from '../data/allProducts';
 import { useAuth } from '../context/AuthContext';
 import axios from 'axios';
 import toast from 'react-hot-toast';
+import { backendUrl } from '../assets/assets';
 
 const Cart = () => {
     const { cartItems, cartCount, clearFromCart, setCartItems } = useCart();
     const { token } = useAuth();
     const navigate = useNavigate();
     const [paymentMethod, setPaymentMethod] = useState('cod');
-    const backendUrl = 'http://192.168.1.101:5000/api';
 
     const [products, setProducts] = useState([]);
     const [userAddress, setUserAddress] = useState(null);

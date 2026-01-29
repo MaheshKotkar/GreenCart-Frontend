@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import toast from 'react-hot-toast';
+import { backendUrl } from '../assets/assets';
 
 const AddProduct = () => {
     const [formData, setFormData] = useState({
@@ -12,7 +13,6 @@ const AddProduct = () => {
         image: ''
     });
     const [categories, setCategories] = useState([]);
-    const backendUrl = 'http://192.168.1.101:5000/api';
 
     const [image, setImage] = useState(false);
     const [imagePreview, setImagePreview] = useState(false);

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import { backendUrl } from '../assets/assets';
 
 // Import images
 import organicVegImg from '../assets/organic_vegitable_image.png';
@@ -15,7 +16,6 @@ import chipsImg from '../assets/Chips.png';
 const Categories = () => {
     const [categories, setCategories] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
-    const backendUrl = 'http://192.168.1.101:5000/api';
 
     const defaultCategories = [
         {
