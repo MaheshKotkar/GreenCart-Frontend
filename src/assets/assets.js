@@ -1,2 +1,2 @@
-export const backendUrl = 'http://192.168.1.101:5000/api';
+export const backendUrl = 'https://greencart-backend-1-pa45.onrender.com/api';
 export const currency = '$';
