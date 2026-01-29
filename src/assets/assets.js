@@ -7,6 +7,10 @@ export const getImageUrl = (image) => {
     if (image.startsWith('data:') || image.startsWith('blob:') || (image.startsWith('http') && !image.includes('localhost'))) {
         return image;
     }
+    // If it's a bundled asset (from frontend build), return as is
+    if (image.includes('/assets/')) {
+        return image;
+    }
     // If it's a localhost URL, replace with backend base URL
     if (image.includes('localhost')) {
         return image.replace(/http:\/\/localhost:\d+/, backendBaseUrl);
