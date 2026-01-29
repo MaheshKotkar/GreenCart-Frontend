@@ -6,6 +6,7 @@ import axios from 'axios';
 import toast from 'react-hot-toast';
 import { useAuth } from '../context/AuthContext';
 import { useCart } from '../context/CartContext';
+import { backendUrl } from '../assets/assets';
 
 const PaymentSuccess = () => {
     const [searchParams] = useSearchParams();
@@ -32,7 +33,7 @@ const PaymentSuccess = () => {
 
             try {
                 const response = await axios.post(
-                    'http://localhost:5000/api/payment/verify-session',
+                    `${backendUrl}/payment/verify-session`,
                     { sessionId },
                     { headers: { Authorization: `Bearer ${token}` } }
                 );

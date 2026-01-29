@@ -6,6 +6,7 @@ import { useAuth } from '../context/AuthContext';
 import axios from 'axios';
 import toast from 'react-hot-toast';
 import addressImage from '../assets/add_address_image.svg';
+import { backendUrl } from '../assets/assets';
 
 const AddAddress = () => {
     const navigate = useNavigate();
@@ -34,7 +35,7 @@ const AddAddress = () => {
             }
 
             try {
-                const response = await axios.get('http://localhost:5000/api/auth/profile', {
+                const response = await axios.get(`${backendUrl}/auth/profile`, {
                     headers: { Authorization: `Bearer ${token}` }
                 });
 
@@ -78,7 +79,7 @@ const AddAddress = () => {
 
         try {
             const response = await axios.put(
-                'http://localhost:5000/api/auth/update-address',
+                `${backendUrl}/auth/update-address`,
                 { address: formData },
                 { headers: { Authorization: `Bearer ${token}` } }
             );
