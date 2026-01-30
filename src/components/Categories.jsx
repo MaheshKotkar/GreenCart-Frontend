@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import { backendUrl } from '../assets/assets';
+import { backendUrl, getImageUrl } from '../assets/assets';
 
 // Import images
 import organicVegImg from '../assets/organic_vegitable_image.png';
@@ -138,7 +138,7 @@ const Categories = () => {
                         >
                             <div className="w-16 h-16 sm:w-24 sm:h-24 flex items-center justify-center mb-4 transform group-hover:-rotate-6 transition-transform">
                                 <img
-                                    src={category.image}
+                                    src={getImageUrl(category.image)}
                                     alt={category.name}
                                     className="w-full h-full object-contain"
                                 />
