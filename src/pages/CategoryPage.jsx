@@ -52,7 +52,9 @@ const CategoryPage = () => {
 
                 // 2. Fetch products for this category
                 const prodRes = await axios.get(`${backendUrl}/product/active`);
-                const filtered = prodRes.data.filter(p => p.category === matchingCat.name);
+                const filtered = prodRes.data.filter(p =>
+                    p.category && p.category.trim().toLowerCase() === matchingCat.name.trim().toLowerCase()
+                );
                 setProducts(filtered);
             } else {
                 setConfig(null);
