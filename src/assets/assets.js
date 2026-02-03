@@ -1,4 +1,7 @@
-export const backendUrl = 'https://greencart-backend-1-pa45.onrender.com/api';
+const isLocalhost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+export const backendUrl = isLocalhost
+    ? 'http://localhost:5000/api'
+    : 'https://greencart-backend-1-pa45.onrender.com/api';
 export const backendBaseUrl = backendUrl.replace('/api', '');
 
 export const getImageUrl = (image) => {
